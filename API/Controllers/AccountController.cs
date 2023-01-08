@@ -30,7 +30,7 @@ namespace API.Controllers
             var user = new appUser
             {
                 UserName = registerDto.userName.ToLower(),
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes("registerDto.password")),
+                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.password)),
                 PasswordSalt = hmac.Key
             };
             _context.Users.Add(user);
@@ -39,14 +39,14 @@ namespace API.Controllers
             return new UserDto
             {
                 UserName=user.UserName,
-                Token=_tokenService.CreateToken(user)
+                Token= _tokenService.CreateToken(user)
             };
         }
 
         [HttpPost("login")] // post:  api/account/register
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(x=>x.UserName==loginDto.userName.ToLower());
+            var user = await _context.Users.SingleOrDefaultAsync(x=>x.UserName==loginDto.Username.ToLower());
             if (user==null)
                 return Unauthorized();
             using var hmac = new HMACSHA512(user.PasswordSalt);
@@ -54,12 +54,12 @@ namespace API.Controllers
             for(int i=0; i<computedHash.Length;i++)
             {
                 if (computedHash[i] != user.PasswordHash[i])
-                return Unauthorized("invalid password");
+                return Unauthorized("invalid password!!");
             }
             return new UserDto
             {
                 UserName=user.UserName,
-                Token=_tokenService.CreateToken(user)
+                Token=  _tokenService.CreateToken(user)
             };
         }
 
