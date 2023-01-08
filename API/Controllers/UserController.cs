@@ -16,7 +16,7 @@ namespace API.Controllers
             _context = context;
         }
 
-        [Authorize]
+        //ng [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<appUser>>> GetUsers()
         {
