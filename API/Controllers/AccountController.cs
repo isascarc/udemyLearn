@@ -27,7 +27,7 @@ namespace API.Controllers
                 return BadRequest("username is taken");
             //string username, string password
             using var hmac = new HMACSHA512();
-            var user = new appUser
+            var user = new AppUser
             {
                 UserName = registerDto.userName.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.password)),
@@ -46,7 +46,9 @@ namespace API.Controllers
         [HttpPost("login")] // post:  api/account/register
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(x=>x.UserName==loginDto.Username.ToLower());
+            //var allUsers = _context.Users.ToList();
+            //var user = await _context.Users.SingleOrDefaultAsync(x=>x.UserName==loginDto.Username.ToLower());
+            var user = await _context.Users.SingleOrDefaultAsync(x=>x.UserName==loginDto.Username);
             if (user==null)
                 return Unauthorized();
             using var hmac = new HMACSHA512(user.PasswordSalt);
