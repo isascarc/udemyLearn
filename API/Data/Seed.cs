@@ -26,7 +26,7 @@ namespace API.Data
             {
                 using var hmac = new HMACSHA512();
 
-                user.UserName = user.UserName.ToString();
+                user.Username = user.Username.ToString();
                 user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes("password"));
                 user.PasswordSalt = hmac.Key;
 
