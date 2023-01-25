@@ -1,8 +1,5 @@
-using System.Security.Claims;
-using API.Extensions;
 using API.Interfaces;
 using AutoMapper;
-using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

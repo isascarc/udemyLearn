@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
-using API.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Data
 {
@@ -27,7 +21,7 @@ namespace API.Data
                 using var hmac = new HMACSHA512();
 
                 user.Username = user.Username.ToString();
-                user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes("password"));
+                user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes("p"));
                 user.PasswordSalt = hmac.Key;
 
                 context.Users.Add(user);

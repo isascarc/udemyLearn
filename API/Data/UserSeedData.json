@@ -1,6 +1,6 @@
 [
     {
-        "UserName": "Tanya",
+        "Username": "Tanya",
         "Gender": "female",
         "DateOfBirth": "1959-05-05",
         "KnownAs": "Tanya",
@@ -19,7 +19,7 @@
         ]
     },
     {
-        "UserName": "Emilia",
+        "Username": "Emilia",
         "Gender": "female",
         "DateOfBirth": "1971-04-02",
         "KnownAs": "Emilia",
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "UserName": "Deanna",
+        "Username": "Deanna",
         "Gender": "female",
         "DateOfBirth": "1980-08-19",
         "KnownAs": "Deanna",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "UserName": "Dorothea",
+        "Username": "Dorothea",
         "Gender": "female",
         "DateOfBirth": "1984-09-05",
         "KnownAs": "Dorothea",
@@ -76,7 +76,7 @@
         ]
     },
     {
-        "UserName": "Janna",
+        "Username": "Janna",
         "Gender": "female",
         "DateOfBirth": "1970-02-06",
         "KnownAs": "Janna",
@@ -95,7 +95,7 @@
         ]
     },
     {
-        "UserName": "Meadows",
+        "Username": "Meadows",
         "Gender": "male",
         "DateOfBirth": "1990-01-19",
         "KnownAs": "Meadows",
@@ -114,7 +114,7 @@
         ]
     },
     {
-        "UserName": "Alston",
+        "Username": "Alston",
         "Gender": "male",
         "DateOfBirth": "1976-07-16",
         "KnownAs": "Alston",
@@ -133,7 +133,7 @@
         ]
     },
     {
-        "UserName": "Chan",
+        "Username": "Chan",
         "Gender": "male",
         "DateOfBirth": "1953-10-25",
         "KnownAs": "Chan",
@@ -152,7 +152,7 @@
         ]
     },
     {
-        "UserName": "Brown",
+        "Username": "Brown",
         "Gender": "male",
         "DateOfBirth": "1979-09-11",
         "KnownAs": "Brown",
@@ -171,7 +171,7 @@
         ]
     },
     {
-        "UserName": "Peck",
+        "Username": "Peck",
         "Gender": "male",
         "DateOfBirth": "1953-05-04",
         "KnownAs": "Peck",
