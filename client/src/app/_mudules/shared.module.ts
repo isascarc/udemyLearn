@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
@@ -8,8 +9,6 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
@@ -26,7 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     }),
     FileUploadModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot(),
+    BsDatepickerModule.forRoot()
   ],
   exports:[
     BsDropdownModule,
